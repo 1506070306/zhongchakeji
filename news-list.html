@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新闻中心</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/child.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body style="background-color:#f5f5f5;">
+<div class="left-menu child-menu">
+	<div class="left-logo"><img src="img/logo2.png"></div>
+    <ul class="nav">
+        <li>
+            <a href="index.html">
+                <p>网站首页</p>
+                <span>HOME</span>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="about.html">
+                <p>中茶课堂</p>
+                <span>ABOUT US</span>
+            </a>
+            <i></i>
+            <!--<ul class="child-nav">
+                <div class="bb"></div>
+                <li><a href="#">公司简介</a>
+                    <ul class="child-nav-1">
+                        <div class="bb"></div>
+                        <li><a href="#">关于我们三级</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">公司梗概</a></li>
+            </ul>-->
+        </li>
+        <li>
+            <a href="product-list.html">
+                <p>中茶资讯</p>
+                <span>PRODUCTS</span>
+            </a>
+            <i></i>
+        </li>
+        <li class="now">
+            <a href="news-list.html">
+                <p>知识科普</p>
+                <span>THE NEWS</span>
+            </a>
+            <i></i>
+        </li>
+        <!--<li>
+            <a href="product-list.html">
+                <p>美丽乡村</p>
+                <span>COUNTRYSIDE</span>
+            </a>
+            <i></i>
+        </li>-->
+        <li>
+            <a href="online.html">
+                <p>中茶服务</p>
+                <span>CONTACT US</span>
+            </a>
+            <i></i>
+        </li>
+    </ul>
+    <div class="contact-menu">
+        总机：0001-1111111 <br/>
+
+		电话：1111-1111-111 <br/>
+
+		联系人：某某 <br/>
+
+		邮箱：153@qq.com <br/>
+		
+		网址：http://www.下次一定.com <br/>
+
+		地址：中国.江苏省南京市浦口区
+		南京信息工程大学
+    </div>
+    <div class="menu-box-1"><img src="img/menu-box.png"></div>
+</div>
+
+<script type="text/javascript">
+/*侧边导航隐藏显示事件*/
+	var z = true;
+	$(".menu-box-1").click(function(){
+		if(z == true){
+			$(".left-menu").animate({marginLeft:0,},500);
+			/*$(".content").animate({marginLeft:290,},500).css("width","calc(100% - 290px)");
+			$(".content").addClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/close.png');
+			z = false;
+		}
+		else{
+			z = true;
+			$(".left-menu").animate({marginLeft:-290,},500);
+			/*$(".content").animate({marginLeft:0,width:'100%',},500);
+			$(".content").removeClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/menu-box.png');
+		}
+		
+	})
+/* --end-- */
+	
+/* 二级菜单显示隐藏效果 */
+	$(".child-nav").hide();
+	$(".nav > li").mouseenter(
+		function(){
+			$(this).children(".child-nav").show().fadeIn(500);
+		}
+	)
+	$(".nav > li").mouseleave(
+		function(){
+			$(this).children(".child-nav").hide().fadeOut(500);
+		}
+	)
+/* -- end -- */	
+
+/* 判断侧边导航的菜单栏高度 */
+	var h = $(".left-menu .nav").height();
+			var h2 = $(window).height();
+			var h3 = h / h2;
+			if(h3 > (54 / 100)){
+				
+				$(".left-menu .nav > li a span").css("display","none");
+			}
+			else{
+				$(".left-menu .nav > li a span").css("display","inline-block");
+			}
+/* -- end -- */	
+</script>
+
+<div class="content">
+	<div class="main-cont">
+    	<ul class="nav-copy fix">
+        	<li id="search">
+            	<i class="change"></i>
+            	<img id="search-img-1" src="img/search-1.png">
+            	<img id="search-img-2" src="img/search-2.png">
+            	<form>
+                	<img class="cc" src="img/jian-1.png">
+                	<input class="shuru" value="Search">
+                    <button class="sub"></button>
+                </form>
+            </li>
+            <li class="nav-select"><a href="#">知识科普</a></li>
+            <!--<li>
+            	<i class="change"></i>
+            	<a href="#">行业资讯</a>
+                <dl>
+                	<img class="cc" src="img/jian-2.png">
+                	<dd><a href="#">三级菜单</a></dd>
+                </dl>-->
+            </li>
+        </ul>
+        <div class="box">
+        	<div class="main">
+            	<ul class="list">
+                	<li>
+                    	<a href="news.html">
+                        	<div class="left-img"><img src="img/茶叶历史.jpg"></div>
+                            <div class="right-info">
+                            	<h2>茶叶的发展历史</h2>
+                                <p>中国茶史的起源，众说纷纭，有先秦说、西汉说、三国说。茶以文化面貌出现，是在两晋北朝，最早喜好饮茶的多是文人雅仕。唐代开元以后，中国的"茶道"大行，饮茶之风弥漫朝野，宋承唐代饮茶之风，日益普及。茶圣陆羽有著《茶经》一书。《神农本草经》亦有记载关于茶这方面的知识。</p>
+                                <span>2021-03-20</span>
+                                <span>王一</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="left-img"><img src="img/hobby.jpg"></div>
+                            <div class="right-info">
+                            	<h2>眼花缭乱的饮茶习惯</h2>
+                                <p>茶是古代中国南方人民对中国饮食文化的贡献，也是中国人民对世界饮食文化的贡献。茶作为世界三大饮料之一。可以说爱茶者遍布世界各地。同时因为地理位置和文化传统的差异，各地喝茶的习惯和风俗也各不相同。因此各种配料独特，口味各异的茶也就相继出现。</p>
+                                <span>2021-03-20</span>
+                                <span>王一</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="left-img"><img src="img/茶叶成分.jpg"></div>
+                            <div class="right-info">
+                            	<h2>茶叶中所含元素及成分</h2>
+                                <p>茶叶中的化学成分，经过分离鉴定的已经有700多种了，种类真是非常的丰富。另外，加工过程中，反应形成更多的成分。我们喝茶之所以能喝到苦味、涩味、甜味、回甘各种细腻的层次，香气有花香、果香、豆香、嫩香、蜜香，就是因为茶叶中的物质实在是太丰富了。</p>
+                                <span>2021-03-20</span>
+                                <span>王一</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="left-img"><img src="img/茶叶种类.jpg"></div>
+                            <div class="right-info">
+                            	<h2>茶叶的缤纷种类</h2>
+                                <p>中国茶叶采摘、加工与饮用的历史十分悠久，目前我国茶叶可以划分为绿茶、黄茶、黑茶、白茶、青茶（乌龙茶）、红茶。茶叶均由茶这种作物的树叶加工而成，1753年，植物分类学家林奈把茶定名为“Theasinensis”，意即原产于中国的茶树，它的学名为：Camellia Sinensis(L．)0．Kuntze。</p>
+                                <span>2021-03-20</span>
+                                <span>王一</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="left-img"><img src="img/名茶.jpg"></div>
+                            <div class="right-info">
+                            	<h2>细品中国名茶</h2>
+                                <p>好茶可以理解为品质上乘的茶叶，中国茶由于品类众多,好茶既有共性，也有个性。不同茶类的品种不同，制作工艺也不同，感官风味各具特色。中国名茶可细分六大茶类，品种数量可谓众多，以浙江省为例,各产茶区都有特色茶品，如浙江杭州西湖风景名胜区的西湖龙井、余杭区的径山茶，湖州安吉县的安吉白茶、德清县的莫干黄芽、长兴县的顾渚紫笋茶等，不一而足。</p>
+                                <span>2021-03-20</span>
+                                <span>王一</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="left-img"><img src="img/功效.jpg"></div>
+                            <div class="right-info">
+                            	<h2>六大茶类各自的功效</h2>
+                                <p>中国是茶叶的故乡，有着悠久的种茶、制茶和饮茶历史。同时也拥有着全世界最多的茶叶种类，而这些不同茶叶又被归为6个基本茶类—绿茶、红茶、青茶（乌龙茶）、白茶、黄茶、黑茶。绿茶，零发酵，茶多酚最多，性微寒，微苦，回甘。可清热祛燥，提神醒脑，不适合肠胃较弱的人群。白茶，轻度发酵，茶性清凉，滋味清淡、回甘。富含茶多糖，适合降糖需求人群。</p>
+                                <span>2021-03-20</span>
+                                <span>王一</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            	<ul class="page">
+                    <li><i class="change"></i><a href="#"> < </a></li>
+                    <li><i class="change"></i><a class="selected" href="#">1</a></li>
+                    <li><i class="change"></i><a href="#">2</a></li>
+                    <li><i class="change"></i><a href="#">></a></li>
+                </ul>
+            </div>
+            <div class="rcom">
+            	<h1>为您推荐 <i class="xian" style="background:rgba(0,0,0,0.2);"></i></h1>
+            	<hr align="left">
+            	<div class="rcom-bd">
+                	<ul class="rcom-list">
+                    	<li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/存储.jpg"></div>
+                                <div class="right-info">
+                                    <h2>六大茶类的存储方式</h2>
+                                    <span>2021-03-20</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/好茶.jpg"></div>
+                                <div class="right-info">
+                                    <h2>什么样的茶算好茶？如何挑选好茶叶？</h2>
+                                    <span>2021-03-20</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/冲泡.jpg"></div>
+                                <div class="right-info">
+                                    <h2>六大茶类的最佳冲泡方式——学会选择冲泡温度和茶具</h2>
+                                    <span>2021-03-20</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/精神.jpg"></div>
+                                <div class="right-info">
+                                    <h2>茶文化博大精深，学习茶文化中的精神品质</h2>
+                                    <span>2021-03-20</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/茶叶3.jpg"></div>
+                                <div class="right-info">
+                                    <h2>茶道，茶艺，茶文化！</h2>
+                                    <span>2021-03-20</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/茶叶4.jpg"></div>
+                                <div class="right-info">
+                                    <h2>茶圣是谁？茶祖是谁？茶神是谁？</h2>
+                                    <span>2021-03-20</span>
+                                </div>
+                            </a>
+                    	</li>
+                     	<li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/茶叶1.jpg"></div>
+                                <div class="right-info">
+                                    <h2>茶叶的制作工艺——了解一杯茶的诞生</h2>
+                                    <span>2021-03-20</span>
+                                </div>
+                            </a>
+                    	</li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+				jQuery(".rcom").slide({mainCell:".rcom-bd ul",autoPage:true,effect:"topLoop",autoPlay:2000,vis:5,trigger:"click"});
+			</script>
+        </div>
+    </div>
+    <div class="footer deep">
+        备案号：黔ICP备12001075号 <br/>
+        访问统计：  浏览总量<span>41046</span>次 /今日浏览<span>41</span>次 /今日独立访客<span>11</span>位    建议(1024*768) IE8.0以上浏览器浏览本站 <br/> 
+        <a href="#">即时通管理</a>    <a href="#">后台登录</a> <br/>
+        Powered by WangID 驰通网络    <a href="">触屏版</a> 丨 <a href="">电脑版</a> <br/>
+    </div>
+</div>
+
+<script type="text/javascript">
+/* 搜索框事件 */	
+	$("#search").mouseenter(function(){
+		$(this).children("form").css("display","block");
+	})
+	$("#search").mouseleave(function(){
+		$(this).children("form").css("display","none");
+	})
+	
+/* --end-- */
+</script>
+</body>
+</html>
